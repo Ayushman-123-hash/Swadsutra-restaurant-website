@@ -1,0 +1,452 @@
+/* ================= Css Reset ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Smooth scrolling for nav links */
+}
+
+body {
+    background-image: url('../Bg1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Background fixed rahega jab scroll karoge */
+    font-family: 'Baloo Bhai 2', cursive; /* Applied font here */
+}
+
+/* Css Variables */
+:root {
+    --navbar-height: 60px;
+}
+
+/* ================= NAVBAR ================= */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out logo and links */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Logo */
+#logo {
+    margin: 10px 30px;
+}
+
+#logo img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+/* Nav Container holding links and login */
+.nav-links-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Menu Lists */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+#navbar li {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 15px; /* Adjust default padding */
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    padding: 4px 18px;
+    border-radius: 25px;
+    color: white;
+    transition: 0.3s;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+/* ================= LOGIN BUTTONS FIX ================= */
+#login {
+    margin-right: 30px;
+}
+
+#login ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+/* Sirf Item1 (Login/Signup) ki padding remove ki aur 10px margin diya */
+#navbar li.item1 {
+    padding: 0;
+    margin-left: 10px; 
+}
+
+#login ul li.item1 a {
+    padding: 6px 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.0rem;
+    border: 2px solid white;
+    text-decoration: none;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* ================= HAMBURGER MENU ================= */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/* ================= HOME ================= */
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.home-content {
+    z-index: 2;
+}
+
+#home h1 {
+    font-size: 4.5rem;
+    color: white;
+    margin-bottom: 1px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+#home p {
+    font-size: 1.3rem;
+    color: white;
+    max-width: 700px;
+    margin: 10px auto;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* ================= MENU SECTION (NEW BOX DESIGN) ================= */
+#menu-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px;
+    margin: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.menu-container {
+    margin-top: 34px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-container .box {
+    background-color: rgb(255, 255, 255);
+    border-radius: 28px;
+    padding: 25px;
+    flex: 1;
+    min-width: 250px; 
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.menu-container .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.menu-container .box img {
+    width: 100%;
+    height: 200px; /* Uniform height for images */
+    border-radius: 10px;
+    object-fit: cover; /* Crops image to fit the box without distorting */
+}
+
+.menu-container .box h2 {
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+.menu-container .box p {
+    font-family: 'Bree Serif', serif;
+}
+
+.menu-container .box .price {
+    font-weight: bold;
+    color: #e67e22; /* Darker orange */
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+/* ================= SERVICES ================= */
+.services-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px;
+    margin: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+#services {
+    margin-top: 34px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center;
+}
+
+#services .box {
+    background-color: rgb(255, 255, 255);
+    border-radius: 28px;
+    padding: 25px;
+    flex: 1;
+    min-width: 250px; 
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+#services .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+#services .box img {
+    width: 100%;
+    height: 180px; 
+    border-radius: 10px;
+    object-fit: cover; /* Updated for clarity */
+}
+
+#services .box p {
+    font-family: 'Bree Serif', serif;
+}
+
+/* ================= CLIENTS ================= */
+#client-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px;
+    margin: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+#clients {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#clients img {
+    border-radius: 14px;
+    height: 100px; 
+    transition: transform 0.3s ease;
+}
+
+#clients img:hover {
+    transform: scale(1.1);
+}
+
+/* ================= CONTACT ================= */
+#contact {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px;
+    margin: 40px 20px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+#contact-box {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 24px;
+}
+
+#contact-box form {
+    width: 50%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 9px;
+    font-size: 1.0rem;
+    border: 1px solid #ccc;
+    font-family: 'Arial', sans-serif;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Utility Classes  */
+.h-primary {
+    font-size: 3.8rem;
+    color: #333; /* Dark color for primary headings on white bg */
+}
+
+#home .h-primary {
+    color: white; /* Specifically for home text */
+}
+
+.h-secondary {
+    font-size: 2rem;
+    padding: 10px;
+}
+
+/* General Button Styles */
+.btn {
+    padding: 12px 30px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Bree Serif', serif;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+/* Specific Style for ORANGE View Menu Button */
+.view-menu-btn {
+    background-color: #f39c12; /* Premium Orange */
+    border: 2px solid #f39c12 /* Darker border */
+}
+
+.view-menu-btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.center {
+    text-align: center;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablet View */
+@media (max-width: 992px) {
+    #home h1 { font-size: 3rem; }
+    #home p { font-size: 1.1rem; }
+    #contact-box form { width: 70%; }
+    
+    .menu-container .box,
+    #services .box {
+        flex: 45%; /* Two cards in a row on tablet for both sections */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 770px) {
+    /* Hamburger Menu Logic */
+    .hamburger { display: block; }
+    
+    /* Hide normal menu, prepare for slide down */
+    .nav-links-container {
+        position: fixed;
+        left: -100%;
+        top: 70px; /* Adjusted to sit just under navbar */
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: 0.4s ease-in-out;
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+    /* Active class toggled by JavaScript */
+    .nav-links-container.active {
+        left: 0;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #navbar li { margin: 15px 0; }
+    
+    #login {
+        margin: 20px auto;
+    }
+
+    /* Hamburger Animation */
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* Home Adjustments */
+    #home { padding: 100px 20px; }
+    #home h1 { font-size: 2.2rem; }
+    #home p { font-size: 1rem; }
+
+    /* Services & Menu Adjustments */
+    .menu-container .box,
+    #services .box { flex: 100%; /* Ek row mein ek card */ }
+    
+    /* Clients Adjustments */
+    #clients { gap: 15px; }
+    #clients img { height: 70px; }
+
+    /* Contact Adjustments */
+    #contact-box form { width: 95%; }
+}
